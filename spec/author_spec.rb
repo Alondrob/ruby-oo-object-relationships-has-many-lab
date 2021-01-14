@@ -4,13 +4,13 @@ describe "Author" do
 
   let!(:betty) { Author.new("Betty") }
 
-    describe "#new" do
+    describe "#new" do #
       it "is initialized with a name" do
         expect{Author.new("Betty")}.to_not raise_error
       end
     end
 
-    describe "#name" do
+    describe "#name" do #> done
       it "has an attr_accessor for name" do
         expect(betty.name).to eq("Betty")
       end
@@ -20,7 +20,7 @@ describe "Author" do
       it "has many posts" do
         expect(betty.posts).to be_a(Array)
         post = Post.new("My Post")
-        post.author = betty
+        post.author = betty 
         expect(betty.posts).to eq([post])
       end
     end
